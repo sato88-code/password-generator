@@ -8,6 +8,7 @@ Come funziona??
 1. Gli dici quanto lunga vuoi la password.
 2. Gli dici se vuoi aggiungere simboli speciali (`!`, `@`, `#`, ecc.) per renderla ancora più sicura.
 3. Lui te la crea all'istante.
+4. Oltre a mostrarla a schermo, il programma salva la password in un file `le_mie_password.txt` direttamente sul tuo **Desktop**, così non la perdi.
 
 Cosa ho imparato facendolo:
 Rispetto ai miei primi esperimenti, qui ho lavorato su:

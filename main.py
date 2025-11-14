@@ -2,6 +2,7 @@
 import string 
 import random
 import time
+import os
 
 # creo il mio insieme da cui andremo a "pescare" i caratteri che formeranno la nostra password e la password finale vuota
 caratteri = string.ascii_letters + string.digits 
@@ -44,3 +45,21 @@ for i in range(3):
 time.sleep(1)
 print("\n perfetto ecco la tua password: \n",password_finale)
 
+# Creiamo un nome per il file
+nome_file = "le_mie_password.txt"
+
+
+# 1. Trova la cartella dell'utente (es: C:\Users\TuoNome)
+user_folder = os.path.expanduser("~") 
+
+# 2. Unisce i pezzi in modo sicuro (funziona su Windows, Mac e Linux)
+path_file = os.path.join(user_folder, "Desktop", "le_mie_password.txt")
+
+# --- SALVATAGGIO ---
+# Ora uso 'path_file' invece del solo nome
+with open(path_file, "a") as f:
+    f.write(f"Password: {password_finale}\n")
+
+
+time.sleep(1)
+print(f"💾 Salvato con successo sul Desktop: {path_file}")
